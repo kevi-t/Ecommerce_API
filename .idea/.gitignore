@@ -7,6 +7,5 @@
 /dataSources/
 /dataSources.local.xml
 
-.ecommerce_rest_api
-settings.py
-#/ecommerce_rest_api/settings.py
+/ecommerce_rest_api/
+/settings.py
