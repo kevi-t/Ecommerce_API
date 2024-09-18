@@ -7,6 +7,7 @@ from rest_framework import status
 from django.shortcuts import redirect
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.conf import settings
 from customer_service.models import Customer
 
 @api_view(['POST'])
@@ -35,11 +36,14 @@ def oauth_callback(request):
     code = request.GET.get('code')
     if not code:
         return HttpResponse("No code provided", status=400)
-
     # Exchange authorization code for access token
     token_url = "https://oauth2.googleapis.com/token"
     data = {
-       addffgfgg,
+        'code': code,
+        'client_id': settings.SOCIALACCOUNT_PROVIDERS['openid_connect']['SERVERS']['google']['client_id'],
+        'client_secret': settings.SOCIALACCOUNT_PROVIDERS['openid_connect']['SERVERS']['google']['secret'],
+        'redirect_uri': settings.SOCIALACCOUNT_PROVIDERS['openid_connect']['SERVERS']['google']['redirect_uri'],
+        'grant_type': 'authorization_code',
     }
     response = requests.post(token_url, data=data)
     token_data = response.json()
