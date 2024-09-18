@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5855385d-faf1-48a3-8e00-9f6116b3126f" name="Changes" comment="chore:updates">
-      <change afterPath="$PROJECT_DIR$/jangop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +149,7 @@
       <workItem from="1726641067610" duration="6110000" />
       <workItem from="1726649059480" duration="6457000" />
       <workItem from="1726659195157" duration="596000" />
-      <workItem from="1726659890596" duration="1905000" />
+      <workItem from="1726659890596" duration="2573000" />
     </task>
     <task id="LOCAL-00001" summary="chore:updates">
       <option name="closed" value="true" />
