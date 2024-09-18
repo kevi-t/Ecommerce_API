@@ -39,11 +39,7 @@ def oauth_callback(request):
     # Exchange authorization code for access token
     token_url = "https://oauth2.googleapis.com/token"
     data = {
-        'code': code,
-        'client_id': '638828902981-jst85g7pdgng9rpi2fqg2su0pg1ph526.apps.googleusercontent.com',  # Replace with actual client_id
-        'client_secret': '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',  # Replace with actual client_secret
-        'redirect_uri': 'http://127.0.0.1:8000/api/ecommerce/account/login/callback/',
-        'grant_type': 'authorization_code',
+       addffgfgg,
     }
     response = requests.post(token_url, data=data)
     token_data = response.json()
