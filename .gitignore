@@ -41,4 +41,6 @@
 #config file
 application.properties
 welcome.html
+;;files to ignore
+settings1.py
 task.py
