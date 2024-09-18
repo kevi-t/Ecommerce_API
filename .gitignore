@@ -2,4 +2,4 @@
 #!/.idea/workspace.xml
 
 ;;files to ignore
-ecommerce_rest_api/settings1.py
+ecommerce_rest_api/settings.py
