@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5855385d-faf1-48a3-8e00-9f6116b3126f" name="Changes" comment="chore:updates">
-      <change afterPath="$PROJECT_DIR$/ecommerce_rest_api/lab.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5855385d-faf1-48a3-8e00-9f6116b3126f" name="Changes" comment="chore:updates" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +150,7 @@
       <workItem from="1726659195157" duration="596000" />
       <workItem from="1726659890596" duration="15366000" />
       <workItem from="1726723270311" duration="8409000" />
-      <workItem from="1726809672342" duration="13531000" />
+      <workItem from="1726809672342" duration="13879000" />
     </task>
     <task id="LOCAL-00001" summary="chore:updates">
       <option name="closed" value="true" />

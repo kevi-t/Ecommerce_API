@@ -1,2 +1,3 @@
 ;;files to ignore
-ecommerce_rest_api/settings.py!/ecommerce_rest_api/lab.py
+ecommerce_rest_api/settings.py
+ecommerce_rest_api/lab2.py
