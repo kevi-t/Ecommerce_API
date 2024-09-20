@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="5855385d-faf1-48a3-8e00-9f6116b3126f" name="Changes" comment="chore:updates">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer_service/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer_service/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce_rest_api/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce_rest_api/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order_service/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/order_service/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order_service/services.py" beforeDir="false" afterPath="$PROJECT_DIR$/order_service/services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order_service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/order_service/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order_service/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/order_service/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,18 +32,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "kevi-t"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kevi-t&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/kevi-t/Ecommerce_API.git",
-    "accountId": "c160d32c-fd88-4b4d-84ca-6675389e2ca2"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/kevi-t/Ecommerce_API.git&quot;,
+    &quot;accountId&quot;: &quot;c160d32c-fd88-4b4d-84ca-6675389e2ca2&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -48,23 +55,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.jangop.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "E:/Projects/Django/Ecommerce_API",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.jangop.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Projects/Django/Ecommerce_API&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projects\Django\Ecommerce_API\ecommerce_rest_api" />
@@ -73,7 +80,7 @@
       <recent name="E:\Projects\Django\Ecommerce_API\customer_service" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.jangop">
+  <component name="RunManager" selected="Django Server.Ecommerce_API">
     <configuration name="jangop" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Ecommerce_API" />
       <option name="ENV_FILES" value="" />
@@ -150,7 +157,9 @@
       <workItem from="1726641067610" duration="6110000" />
       <workItem from="1726649059480" duration="6457000" />
       <workItem from="1726659195157" duration="596000" />
-      <workItem from="1726659890596" duration="4158000" />
+      <workItem from="1726659890596" duration="15366000" />
+      <workItem from="1726723270311" duration="8409000" />
+      <workItem from="1726809672342" duration="12139000" />
     </task>
     <task id="LOCAL-00001" summary="chore:updates">
       <option name="closed" value="true" />
@@ -185,17 +194,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="chore:updates" />
     <option name="LAST_COMMIT_MESSAGE" value="chore:updates" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/customer_service/models.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Ecommerce_API$jangop.coverage" NAME="jangop Coverage Results" MODIFIED="1726661816710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

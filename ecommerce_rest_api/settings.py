@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -6,7 +7,15 @@ SECRET_KEY = 'django-insecure-ju(nyql!isq_vo7@_1#jh_z$os6(i%lz)01-vbeq@*&9vt0%x2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+AFRICASTALKING_USERNAME = 'sandbox'
+AFRICASTALKING_API_KEY = 'atsk_878fed6f26cb4e196ab242bd5a6df11dc8afee70f2b4dfdd3a925c282ad9f76c6c99a1fc'
+AFRICASTALKING_API_URL = 'https://api.sandbox.africastalking.com/version1/messaging'
+
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    '9047-102-215-40-130.ngrok-free.app'
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
