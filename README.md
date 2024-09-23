@@ -54,25 +54,15 @@ AWS CLI and Elastic Beanstalk CLI (for deployment)
                          cd ecommerce-api
 2. Set Up Virtual Environment: python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-3. Install Dependencies
-bash
-Copy code
-pip install -r requirements.txt
+3. Install Dependencies: pip install -r requirements.txt
 4. Configure Environment Variables
 Create a .env file in the root directory and add necessary environment variables:
-
-plaintext
-Copy code
 SECRET_KEY=your_secret_key
 DEBUG=True
 DATABASE_URL=your_database_url
 5. Run Migrations
-bash
-Copy code
 python manage.py migrate
 6. Run the Development Server
-bash
-Copy code
 python manage.py runserver
 The server will be running at http://127.0.0.1:8000/.
 
@@ -85,13 +75,9 @@ Customer Service
 
 GET /api/ecommerce/customer/list/: Retrieves a list of all customers.
 
-bash
-Copy code
 curl -X GET http://127.0.0.1:8000/api/ecommerce/customer/list/
 POST /api/ecommerce/customer/create/: Create a new customer.
 
-bash
-Copy code
 curl -X POST http://127.0.0.1:8000/api/ecommerce/customer/create/ \
 -H "Content-Type: application/json" \
 -d '{"name": "John Doe", "email": "john@example.com"}'
@@ -108,14 +94,10 @@ The API uses OAuth2 for authentication. Use /o/token/ for obtaining access token
 Testing
 Run the following command to execute the unit tests:
 
-bash
-Copy code
 python manage.py test
 Test Coverage
 You can generate a test coverage report using coverage.py:
 
-bash
-Copy code
 coverage run manage.py test
 coverage report -m
 Continuous Integration (CI)
@@ -150,13 +132,9 @@ Deployment
 Deploying to AWS Elastic Beanstalk
 Install AWS Elastic Beanstalk CLI
 
-bash
-Copy code
 pip install awsebcli
 Initialize Elastic Beanstalk
 
-bash
-Copy code
 eb init -p python-3.x ecommerce-api --region your-aws-region
 Create and Deploy the Environment
 
@@ -168,28 +146,21 @@ Run Database Migrations on AWS
 
 After deploying, run your database migrations on the server:
 
-bash
-Copy code
 eb ssh
 python manage.py migrate
 Open the Application
 
 After deployment is complete, open the application in your browser:
 
-bash
-Copy code
 eb open
 Environment Variables for AWS
 Use the AWS Management Console or the EB CLI to set environment variables in your Elastic Beanstalk environment. Example:
 
-bash
-Copy code
 eb setenv SECRET_KEY=your_secret_key DEBUG=False DATABASE_URL=your_database_url
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 vbnet
-Copy code
 
 ### Key Features in This `README.md`:
 1. **Project Structure**: Clearly outlined, showing how the project is divided into services.
@@ -202,14 +173,6 @@ Copy code
 You can push this `README.md` to your GitHub repository and follow the deployment instructions to host the app on AWS Elastic Beanstalk!
 
 
-
-
-
-You said:
-for endpoint i have exported my postman collection
-ChatGPT said:
-ChatGPT
-Great! Since you've exported your Postman collection, you can include that in your README.md so that others can easily import it into their own Postman environments to test the API endpoints.
 
 Here's how to update the API Endpoints section in your README.md:
 
