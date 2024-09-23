@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5855385d-faf1-48a3-8e00-9f6116b3126f" name="Changes" comment="chore:updates" />
+    <list default="true" id="5855385d-faf1-48a3-8e00-9f6116b3126f" name="Changes" comment="chore:updates">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account_service/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/account_service/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account_service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account_service/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account_service/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account_service/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce_rest_api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce_rest_api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order_service/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/order_service/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +58,7 @@
     &quot;Python.jangop.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/Projects/Django/Ecommerce_API&quot;,
@@ -150,7 +158,10 @@
       <workItem from="1726659195157" duration="596000" />
       <workItem from="1726659890596" duration="15366000" />
       <workItem from="1726723270311" duration="8409000" />
-      <workItem from="1726809672342" duration="14814000" />
+      <workItem from="1726809672342" duration="21582000" />
+      <workItem from="1726949747596" duration="1180000" />
+      <workItem from="1726995568131" duration="14436000" />
+      <workItem from="1727110601283" duration="2093000" />
     </task>
     <task id="LOCAL-00001" summary="chore:updates">
       <option name="closed" value="true" />
