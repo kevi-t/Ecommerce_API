@@ -11,12 +11,12 @@ A Django REST API for managing an eCommerce system, including customer managemen
 • .env: Environment variables file for sensitive data such as database credentials, secret keys, and API keys.<br>
 
 ## Prerequisites
-• Python 3.x
-• Pip
-• Virtualenv (optional but recommended)
-• PostgreSQL or any compatible database
-• Google Account 
-• Africa Talk SMS gateway
+• Python 3.x<br>
+• Pip<br>
+• Virtualenv (optional but recommended)<br>
+• PostgreSQL or any compatible database<br>
+• Google Account <br>
+• Africa Talk SMS gateway<br>
 
 ## Setup Instructions
 1. Clone the Repository:  git clone https://github.com/yourusername/ecommerce-api.git then: cd ecommerce-api
