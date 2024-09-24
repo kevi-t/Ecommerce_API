@@ -62,3 +62,7 @@ POST /api/ecommerce/order/create/: Creates a new order.<br>
 Account Service<br>
 POST /api/ecommerce/account/register/: Registers a new user account.<br>
 POST /api/ecommerce/account/login/: Logs in a user and returns an authentication token.<br>
+
+### Process flow Diagram
+![ecommerce_api process flow diagram](https://github.com/user-attachments/assets/2f441884-cf62-4148-87c9-113d7c22d431)
+
