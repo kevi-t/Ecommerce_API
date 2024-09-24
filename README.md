@@ -3,12 +3,12 @@
 A Django REST API for managing an eCommerce system, including customer management, order processing, and user account functionalities. The API provides OAuth2 authentication and supports modular endpoints for different services.
 
 ## Project Structure
-ecommerce_api/: Main Django project settings and configurations.<br>
-customer_service/: Contains logic and routes for customer-related functionality.<br>
-order_service/: Contains logic and routes for managing orders.<br>
-account_service/: Manages user account creation, authentication, and profile updates.<br>
-manage.py: Django’s utility script for tasks like running the server, making migrations, etc.<br>
-.env: Environment variables file for sensitive data such as database credentials, secret keys, and API keys.<br>
+• ecommerce_api/: Main Django project settings and configurations.<br>
+• customer_service/: Contains logic and routes for customer-related functionality.<br>
+• order_service/: Contains logic and routes for managing orders.<br>
+• account_service/: Manages user account creation, authentication, and profile updates.<br>
+• manage.py: Django’s utility script for tasks like running the server, making migrations, etc.<br>
+• .env: Environment variables file for sensitive data such as database credentials, secret keys, and API keys.<br>
 
 ## Setup Instructions
 
@@ -53,13 +53,13 @@ To simplify testing the API, you can import the provided Postman collection:
 Download the Postman collection file: ecommerce-api-postman-collection.json
 Open Postman, click on Import, and select the downloaded .json file.
 You will now have access to all the API endpoints with pre-configured requests in Postman.<br>
-Customer Service<br>
+• Customer Service<br>
 GET /api/ecommerce/customer/list/: Retrieves a list of all customers.<br>
 POST /api/ecommerce/customer/create/: Creates a new customer.<br>
-Order Service<br>
+• Order Service<br>
 GET /api/ecommerce/order/list/: Retrieves a list of all orders.<br>
 POST /api/ecommerce/order/create/: Creates a new order.<br>
-Account Service<br>
+• Account Service<br>
 POST /api/ecommerce/account/register/: Registers a new user account.<br>
 POST /api/ecommerce/account/login/: Logs in a user and returns an authentication token.<br>
 
