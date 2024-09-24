@@ -1,4 +1,5 @@
 import requests
+
 from django.conf import settings
 from django.contrib.auth import authenticate
 from django.http import HttpResponse
@@ -11,6 +12,7 @@ from rest_framework.authtoken.models import Token
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
+from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import login as django_login
 
 @api_view(['POST'])
@@ -19,14 +21,35 @@ def login_user(request):
     email = request.data.get('email')
     password = request.data.get('password')
 
-    print(f"Login attempt - Email: {email}, Password: {password}")
-
     user = authenticate(email=email, password=password)
     if user is not None:
-        # return Response({"message": "Login successful"})
-        token, created = Token.objects.get_or_create(user=user)
-        return Response({'token': token.key}, status=status.HTTP_200_OK)
+        # Create JWT tokens
+        refresh = RefreshToken.for_user(user)
+        return Response({
+            'refresh': str(refresh),
+            'access': str(refresh.access_token),  # Correctly access the access token here
+        }, status=status.HTTP_200_OK)
+
     return Response({'error': 'Invalid credentials'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+# @api_view(['POST'])
+# @permission_classes([AllowAny])
+# def login_user(request):
+#     email = request.data.get('email')
+#     password = request.data.get('password')
+#
+#     print(f"Login attempt - Email: {email}, Password: {password}")
+#
+#     user = authenticate(email=email, password=password)
+#     if user is not None:
+#         # return Response({"message": "Login successful"})
+#         token, created = Token.objects.get_or_create(user=user)
+#         return Response({'token': token.key}, status=status.HTTP_200_OK)
+#     return Response({'error': 'Invalid credentials'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def oidc_login(request):
