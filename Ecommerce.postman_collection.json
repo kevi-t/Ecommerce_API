@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "8f6ee793-b76b-4d15-af53-59a4e50451cd",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22113006"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kevin Wafula\",\r\n    \"email\": \"kevin@gmail.com\",\r\n    \"phone_number\":\"+254792526394\",\r\n    \"password\": \"java@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/customer/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"customer",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"kevin@gmail.com\",\r\n    \"password\": \"java@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/account/login/callback/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"account",
+						"login",
+						"callback",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customer\":\"1\",\r\n    \"item\": \"Avacado\",\r\n    \"amount\": \"300\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/order/place-order/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"order",
+						"place-order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "lab",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/customer/test/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"customer",
+						"test",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OIDC",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/account/oidc/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"account",
+						"oidc",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
