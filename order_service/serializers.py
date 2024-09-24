@@ -10,7 +10,6 @@ class OrderSerializer(serializers.ModelSerializer):
         }
 
     def create(self, validated_data):
-        # Custom logic before creating the Order, if needed
         order = Order(
             customer=validated_data['customer'],
             item=validated_data['item'],

@@ -13,6 +13,4 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 
-    # path('login/callback/', views.oauth_callback, name='oauth_callback'),
-    # path('login/callback1/', views.login_callback, name='login_callback'),
 ]
