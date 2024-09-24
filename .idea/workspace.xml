@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5855385d-faf1-48a3-8e00-9f6116b3126f" name="Changes" comment="chore:updates">
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account_service/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/account_service/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account_service/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/account_service/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account_service/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/account_service/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer_service/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer_service/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order_service/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/order_service/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order_service/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/order_service/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order_service/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/order_service/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +158,7 @@
       <workItem from="1726995568131" duration="14436000" />
       <workItem from="1727110601283" duration="4199000" />
       <workItem from="1727157326703" duration="1881000" />
-      <workItem from="1727159497759" duration="17675000" />
+      <workItem from="1727159497759" duration="20923000" />
     </task>
     <task id="LOCAL-00001" summary="chore:updates">
       <option name="closed" value="true" />
