@@ -1,2 +1,34 @@
 ;;files to ignore
-#ecommerce_rest_api/settings.py
+
+# Virtual environment
+venv/
+env/
+
+# Byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Django settings for local development
+.env
+*.sqlite3
+db.sqlite3
+
+# Logs and temporary files
+*.log
+*.pot
+*.py[co]
+*.swp
+*.swo
+
+# Node modules (if using JavaScript in the project)
+node_modules/
+
+# VS Code settings (optional)
+.vscode/
+
+# PyCharm settings (optional)
+.idea/
+
+# MacOS system files
+.DS_Store
