@@ -5,7 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from .serializers import OrdersSerializer
 from .services import send_sms
-from customer.models import Customer  # Adjust based on your actual import
+from customer.models.models import Customer 
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])

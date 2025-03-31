@@ -1,7 +1,7 @@
 from pathlib import Path
 from datetime import timedelta
 import os
-import dj_database_url
+# import dj_database_url
 from environ import Env
 env = Env()
 env.read_env()
@@ -74,7 +74,7 @@ SIMPLE_JWT = {
 }
 
 AUTHENTICATION_BACKENDS = [
-    'customer.custom_auth_backend.EmailBackend',
+    'customer.authentication.custom_auth_backend.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend'
 ]
@@ -161,16 +161,17 @@ STATIC_URL = 'static/'
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-LOGIN_URL = '/admin/login/'
-LOGIN_REDIRECT_URL = 'http://localhost:8000/api/ecommerce/account/oidc/callback/'
-LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
-
-# Required for `allauth`
+# Allauth settingss
 AUTH_USER_MODEL = 'customer.Customer'
 ACCOUNT_LOGIN_METHODS = {'email'}
 ACCOUNT_EMAIL_VERIFICATION = 'none'  # Skip email verification for simplicity
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']  
+
+LOGIN_URL = '/'
+# LOGIN_REDIRECT_URL = 'http://localhost:8000/oidc/callback/'
+# LOGIN_URL = '/api/ecommerce/customer/login/'  # Prevent admin login redirection
+LOGIN_REDIRECT_URL = 'http://localhost:8000/api/ecommerce/customer/success/' 
+LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
 
 REST_AUTH_TOKEN_MODEL = 'customer.Token'
 

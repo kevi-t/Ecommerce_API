@@ -1,7 +1,7 @@
 # customer/serializers.py
 from django.contrib.auth import authenticate
 from rest_framework import serializers
-from .models import Customer
+from ..models.models import Customer
 
 
 # Registration logic
@@ -27,23 +27,3 @@ class CustomerSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Password must be at least 8 characters long")
         # Add more custom password validations if needed (e.g., checking for special characters, etc.)
         return value
-
-
-# Login logic
-class LoginSerializer(serializers.Serializer):
-    email = serializers.EmailField()
-    password = serializers.CharField(write_only=True)
-
-    def validate(self, data):
-        email = data.get('email')
-        password = data.get('password')
-
-        if email and password:
-            user = authenticate(email=email, password=password)
-            if user is None:
-                raise serializers.ValidationError("Invalid login credentials.")
-        else:
-            raise serializers.ValidationError("Must include 'email' and 'password'.")
-
-        data['user'] = user
-        return data

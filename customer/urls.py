@@ -1,20 +1,22 @@
 # customer/urls.py
 from django.urls import path
-from .import views
+from .views.register_views import register_user
+from .views.login_views import login_user
+from .views.oidc_views import oidc_login,oidc_callback
+from .views.success_views import success
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView,)
 
 
 urlpatterns = [
-    path('test/', views.test, name='test'),
-    path('register/', views.register_user, name='register_user'),
-    path('login/', views.login_user, name='login_user'),
+    path('register/', register_user, name='register_user'),
+    path('login/', login_user, name='login_user'),
     
     
-    path('oidc/login/', views.oidc_login, name='oidc_login'),
-    path('oidc/callback/', views.oidc_callback, name='oidc_callback'),
-    path('success/', views.success, name='success'),
+    path('oidc/login/', oidc_login, name='oidc_login'),
+    path('oidc/callback/', oidc_callback, name='oidc_callback'),
+    path('success/', success, name='success'),
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
+   
 ]
