@@ -3,6 +3,7 @@
 A Django REST API for managing an eCommerce system, including customer management, order processing, and user account functionalities. The API provides OAuth2 authentication and supports modular endpoints for different services.
 
 ## Project Structure
+![alt text](image.png)
 • ecommerce_rest_api/: Main Django project settings and configurations.<br>
 • customer_service/: Contains logic and routes for customer-related functionality.<br>
 • order_service/: Contains logic and routes for managing orders.<br>
