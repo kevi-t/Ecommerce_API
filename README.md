@@ -4,12 +4,7 @@ A Django REST API for managing an eCommerce system, including customer managemen
 
 ## Project Structure
 ![alt text](image.png)
-• ecommerce_rest_api/: Main Django project settings and configurations.<br>
-• customer_service/: Contains logic and routes for customer-related functionality.<br>
-• order_service/: Contains logic and routes for managing orders.<br>
-• account_service/: Manages user account creation, authentication, and profile updates.<br>
-• manage.py: Django’s utility script for tasks like running the server, making migrations, etc.<br>
-• .env: Environment variables file for sensitive data such as database credentials, secret keys, and API keys.<br>
+
 
 ## Prerequisites
 • Python 3.x<br>
