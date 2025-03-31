@@ -164,14 +164,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Allauth settingss
 AUTH_USER_MODEL = 'customer.Customer'
 ACCOUNT_LOGIN_METHODS = {'email'}
-ACCOUNT_EMAIL_VERIFICATION = 'none'  # Skip email verification for simplicity
+ACCOUNT_EMAIL_VERIFICATION = 'none'  
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']  
 
 LOGIN_URL = '/'
-# LOGIN_REDIRECT_URL = 'http://localhost:8000/oidc/callback/'
-# LOGIN_URL = '/api/ecommerce/customer/login/'  # Prevent admin login redirection
-LOGIN_REDIRECT_URL = 'http://localhost:8000/api/ecommerce/customer/success/' 
-LOGOUT_REDIRECT_URL = '/'  # Redirect after logout
+LOGIN_REDIRECT_URL = 'http://localhost:8000/api/ecommerce/customer/oidc/callback/'
+
+LOGOUT_REDIRECT_URL = '/' 
 
 REST_AUTH_TOKEN_MODEL = 'customer.Token'
 

@@ -7,6 +7,7 @@ from rest_framework.decorators import api_view, permission_classes
 
 from django.conf import settings
 from django.shortcuts import redirect
+from django.contrib.auth import login as django_login
 
 
 import requests
@@ -43,6 +44,7 @@ def oidc_callback(request):
         'client_secret': settings.OIDC_RP_CLIENT_SECRET,
     }
     token_response = requests.post(settings.OIDC_OP_TOKEN_ENDPOINT, data=token_data)
+    print(token_response.json())
     if token_response.status_code != 200:
         return Response({'error': 'Failed to fetch token'}, status=status.HTTP_400_BAD_REQUEST)
 
@@ -65,8 +67,8 @@ def oidc_callback(request):
             user.save()
 
         # Log in user
-        # user.backend = 'django.contrib.auth.backends.ModelBackend'  # Ensures authentication works
-        # django_login(request, user)
+        user.backend = 'django.contrib.auth.backends.ModelBackend'  # Ensures authentication works
+        django_login(request, user)
 
         # Generate JWT token for frontend use
         refresh = RefreshToken.for_user(user)
