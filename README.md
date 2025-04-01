@@ -9,7 +9,6 @@ A Django REST API for managing an eCommerce system, including customer managemen
 ## Prerequisites
 • Python 3.x<br>
 • Pip<br>
-• Virtualenv (optional but recommended)<br>
 • PostgreSQL or any compatible database<br>
 • [Google Account](https://console.cloud.google.com/getting-started)  <br>
 • [Africa Talk SMS gateway](https://account.africastalking.com/apps/sandbox) <br>
