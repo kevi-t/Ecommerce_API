@@ -1,7 +1,7 @@
 from pathlib import Path
 from datetime import timedelta
 import os
-# import dj_database_url
+import dj_database_url
 from environ import Env
 env = Env()
 env.read_env()
@@ -116,15 +116,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'ecommerce_db',
+#         'USER': 'postgres',
+#         'PASSWORD': 'java',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ecommerce_db',
-        'USER': 'postgres',
-        'PASSWORD': 'java',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(default=env('DATABASE_URL'), conn_max_age=600, ssl_require=True)
 }
 
 
