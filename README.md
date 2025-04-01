@@ -36,14 +36,14 @@ The workflow is configured to run tests on every push to the repository.
 
 
 ### Postman Collection
-To simplify testing the API, you can download the provided Postman collection [Ecommerce_postman_collection]:<br>
+To simplify testing the API, you can download the provided Postman collection [Ecommerce_postman_collection](https://github.com/kevi-t/Ecommerce_API/blob/master/Ecommerce.postman_collection.json):<br>
 • Customer:   <br>
     POST[/api/ecommerce/customer/register/]: Creates a new customer.<br>
     POST[/api/ecommerce/customer/login/]: Logs in a user and returns an authentication token.<br>
     PUT[/api/ecommerce/customer/update/]: update user profile (requires Bearer token).<br>
-• Order:<br>     
-      POST[ /api/ecommerce/order/place-order/): Creates a new order.(requires Bearer token)<br>
-      GET[ /api/ecommerce/order/list/]: Fetches the list of orders. (requires Bearer token)<br>
+• Order:      <br>  
+      POST[/api/ecommerce/order/place-order/]: Creates a new order.(requires Bearer token)<br>
+      GET[/api/ecommerce/order/list/]: Fetches the list of orders. (requires Bearer token)<br>
 • OpenID connect: Paste the url;http://localhost:8000/api/ecommerce/customer/oidc/login/ on the browser to sign in with Google and obtain access Token<br>
 
 ### Expected Sample Outputs
