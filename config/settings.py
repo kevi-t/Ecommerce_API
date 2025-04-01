@@ -17,7 +17,11 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 # DEBUG = env.bool("DJANGO_DEBUG", default=True)
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','*']
+ALLOWED_HOSTS = ['localhost','*','ecommerce-api-alpha-dun.vercel.app']
+
+CORS_ALLOWED_ORIGINS = [
+    "https://ecommerce-api-alpha-dun.vercel.app",
+]
 
 # Configure Django sites framework
 SITE_ID = 1
@@ -171,7 +175,8 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']  
 
 LOGIN_URL = '/'
-LOGIN_REDIRECT_URL = 'http://localhost:8000/api/ecommerce/customer/oidc/callback/'
+# LOGIN_REDIRECT_URL = 'http://localhost:8000/api/ecommerce/customer/oidc/callback/'
+LOGIN_REDIRECT_URL = 'https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/customer/oidc/callback/'
 
 LOGOUT_REDIRECT_URL = '/' 
 
