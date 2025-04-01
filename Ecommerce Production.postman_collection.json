@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "8746ee50-417a-4823-9da3-b36aeead87ff",
+		"name": "Ecommerce Production",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22113006"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kevin Wafula\",\r\n    \"email\": \"kevinwafula1999@gmail.com\",\r\n    \"phone_number\":\"+254735643381\",\r\n    \"password\": \"java@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/customer/register/",
+					"protocol": "https",
+					"host": [
+						"ecommerce-api-alpha-dun",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"ecommerce",
+						"customer",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"kevinwafula1999@gmail.com\",\r\n    \"password\": \"java@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/customer/login/",
+					"protocol": "https",
+					"host": [
+						"ecommerce-api-alpha-dun",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"ecommerce",
+						"customer",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzNDYyMDA1LCJpYXQiOjE3NDM0NjExMDUsImp0aSI6Ijc1NGMyNmRmNzljNjQxZDQ5NzU4YjM1YzBkMmJmYTc0IiwidXNlcl9pZCI6MX0.SgXTFKuGeLJTEgXEX0tBs5rYxfcuWNaj7dosiCpiCII",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"item\": \"Avacado\",\r\n    \"amount\": \"300\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/order/place-order/",
+					"protocol": "https",
+					"host": [
+						"ecommerce-api-alpha-dun",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"ecommerce",
+						"order",
+						"place-order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzNTE2MDgyLCJpYXQiOjE3NDM1MTUxODIsImp0aSI6Ijc5NzY4NmM4ODA5YjQ3M2ZiYTgxYjA2MmMyODM4MDJlIiwidXNlcl9pZCI6MX0.9cFniDUdIBibxNcpI--FxhwswKJ33f3R-Dz-_xCEtUk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kevin Wepondi\",\r\n    \"phone_number\": \"0710345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/customer/update/",
+					"protocol": "https",
+					"host": [
+						"ecommerce-api-alpha-dun",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"ecommerce",
+						"customer",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OrdersList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzNTE2MDgyLCJpYXQiOjE3NDM1MTUxODIsImp0aSI6Ijc5NzY4NmM4ODA5YjQ3M2ZiYTgxYjA2MmMyODM4MDJlIiwidXNlcl9pZCI6MX0.9cFniDUdIBibxNcpI--FxhwswKJ33f3R-Dz-_xCEtUk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/order/list/",
+					"protocol": "https",
+					"host": [
+						"ecommerce-api-alpha-dun",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"ecommerce",
+						"order",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "openID connect",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/customer/oidc/login/",
+					"protocol": "https",
+					"host": [
+						"ecommerce-api-alpha-dun",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"ecommerce",
+						"customer",
+						"oidc",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
