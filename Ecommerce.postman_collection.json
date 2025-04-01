@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "8f6ee793-b76b-4d15-af53-59a4e50451cd",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22113006"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kevin Wafula\",\r\n    \"email\": \"kevinwafula1999@gmail.com\",\r\n    \"phone_number\":\"+254735643381\",\r\n    \"password\": \"java@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/customer/register/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"customer",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"kevinwafula1999@gmail.com\",\r\n    \"password\": \"java@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/customer/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"customer",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateProfile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzNTAwOTY3LCJpYXQiOjE3NDM1MDAwNjcsImp0aSI6IjdjYTczNDU2NmZmNzRiMzRhOGQwMDkxZWYwZGYxOWIyIiwidXNlcl9pZCI6M30.kc2KXOuzmfIIsyyn1nqEJ7SeEFFi_hrEslZz41Aor_U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Kevin Wepondi\",\r\n    \"phone_number\": \"0712345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/customer/update/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"customer",
+						"update",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzNDYyMDA1LCJpYXQiOjE3NDM0NjExMDUsImp0aSI6Ijc1NGMyNmRmNzljNjQxZDQ5NzU4YjM1YzBkMmJmYTc0IiwidXNlcl9pZCI6MX0.SgXTFKuGeLJTEgXEX0tBs5rYxfcuWNaj7dosiCpiCII",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"item\": \"Avacado\",\r\n    \"amount\": \"300\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/order/place-order/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"order",
+						"place-order",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OrdersList",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzNDYzNDM3LCJpYXQiOjE3NDM0NjI1MzcsImp0aSI6ImJlNjNiYjQ1ZGExMjQ4MWQ4NTE3NmQ3YzRmMjcxNjMwIiwidXNlcl9pZCI6MX0.OmPhIJPXHVSwqjqAYqqTJHgXDF-Hl8MH9Lb8XiQJeCU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/order/list/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"order",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "openID connect",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/ecommerce/customer/oidc/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"ecommerce",
+						"customer",
+						"oidc",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

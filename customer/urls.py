@@ -2,6 +2,7 @@
 from django.urls import path
 from .views.register_views import register_user
 from .views.login_views import login_user
+from .views.profile_views import update_profile
 from .views.oidc_views import oidc_login,oidc_callback
 from .views.success_views import success
 from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView,)
@@ -10,6 +11,7 @@ from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshVie
 urlpatterns = [
     path('register/', register_user, name='register_user'),
     path('login/', login_user, name='login_user'),
+    path('update/', update_profile, name='update-profile'),
     
     
     path('oidc/login/', oidc_login, name='oidc_login'),
