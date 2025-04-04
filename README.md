@@ -54,8 +54,12 @@ The workflow is configured to run tests on every push to the repository.
 3. **API Endpoints**: Sample endpoints for the main modules (customer, order).
 
 
-### Postman Collection
-To simplify testing the API, you can download the provided Postman collection [Ecommerce_postman_collection](https://github.com/kevi-t/Ecommerce_API/blob/master/Ecommerce.postman_collection.json):<br>
+### Testing the API on Postman
+To simplify testing the API, you can download and import the provided Postman collection:
+* [Ecommerce Local_postman_collection](https://github.com/kevi-t/Ecommerce_API/blob/master/Ecommerce.postman_collection.json)
+* [Ecommerce Production_postman_collection](https://github.com/kevi-t/Ecommerce_API/blob/master/Ecommerce%20Production.postman_collection.json)<br>
+
+Endpoints descriptions:
 * Customer:
    ```bash
     POST[/api/ecommerce/customer/register/]: Creates a new customer.
@@ -68,9 +72,10 @@ To simplify testing the API, you can download the provided Postman collection [E
       POST[/api/ecommerce/order/place-order/]: Creates a new order.(requires Bearer token)
       GET[/api/ecommerce/order/list/]: Fetches the list of orders. (requires Bearer token)
    ```
-* OpenID connect/Google Sigin: paste on brwowser to obtain the access Token
+* OpenID connect/Google Sigin: paste on a browser to obtain the access Token
    ```bash  
-      http://localhost:8000/api/ecommerce/customer/oidc/login/ 
+      http://localhost:8000/api/ecommerce/customer/oidc/login/
+      https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/customer/oidc/login/
    ```
 ### Expected Sample Outputs
 #### Register Endpoint
