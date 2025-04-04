@@ -87,5 +87,9 @@ To simplify testing the API, you can download the provided Postman collection [E
 ### Process flow Diagram
 ![ecommerce_api process flow diagram](https://github.com/user-attachments/assets/c11cec5c-5576-46d5-b984-7acebf55fb81)
 
+### Deployment
+* [Vercel](https://vercel.com/): Deployment of my Django App
+* [Railway](https://railway.com/): Deployment of my Postgre database service
+
 ### Resources
 * [Django docs](https://docs.djangoproject.com/): Django documentation 
