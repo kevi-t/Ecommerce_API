@@ -1,5 +1,4 @@
 # customer/serializers.py
-from django.contrib.auth import authenticate
 from rest_framework import serializers
 from ..models.models import Customer
 import re
@@ -25,10 +24,12 @@ class CustomerSerializer(serializers.ModelSerializer):
         if len(num_value) != 10:
             raise serializers.ValidationError("Phone number must have exactly 10 digits")
         
-        if Customer.objects.filter(phone_number=value).exists():
+        formatted_number = "+254" + num_value[1:]
+        
+        if Customer.objects.filter(phone_number=formatted_number).exists():
             raise serializers.ValidationError("Customer with this phone number already exists.")
         
-        return "+254" + num_value[1:]
+        return formatted_number
     
     def validate_password(self, value):
         if len(value) < 8:

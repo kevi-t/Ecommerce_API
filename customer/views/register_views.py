@@ -21,4 +21,3 @@ def register_user(request):
             field: messages for field, messages in serializer.errors.items()
         }
         return Response({"errors": formatted_errors}, status=status.HTTP_400_BAD_REQUEST)
-        # return Response({"errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
