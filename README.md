@@ -5,25 +5,44 @@ A Django REST API for managing an eCommerce system, including customer managemen
 ## Project Structure
 ![alt text](image.png)
 
+## Technologies used
+* [Django](https://www.djangoproject.com/): A Python web framework
+* [DRF](www.django-rest-framework.org/): A powerful and flexible toolkit for building Web APIs
 
 ## Prerequisites
-• Python 3.x<br>
-• Pip<br>
-• PostgreSQL or any compatible database<br>
-• [Google Account](https://console.cloud.google.com/getting-started)  <br>
-• [Africa Talk SMS gateway](https://account.africastalking.com/apps/sandbox) <br>
+* [Python 3.x](https://www.python.org/downloads/)
+* [Pip](https://pip.pypa.io/en/stable/installation/)
+* [PostgreSQL](https://www.postgresql.org/download/)or any compatible database
+* [Google Account](https://console.cloud.google.com/getting-started)  
+* [Africa Talk SMS gateway](https://account.africastalking.com/apps/sandbox) 
 
 ## Setup Instructions
-1. Clone the Repository:  git clone https://github.com/kevi-t/Ecommerce_API 
-2. Set Up Virtual Environment: python -m venv venv
-3. To activate the environment: source venv/bin/activate & On Windows use `venv\Scripts\activate`
-4. Install Dependencies: pip install -r requirements.txt
+1. Clone the Repository:                                                                                                                                                          
+    ```bash
+        $ git clone https://github.com/kevi-t/Ecommerce_API 
+    ```
+2. Set Up Virtual Environment:                                                                                                                                                                                  
+    ```bash
+        $ python -m venv venv 
+    ```
+3. To activate the environment: source venv/bin/activate & On Windows use                                                                                                                                        
+    ```bash
+        $ venv\Scripts\activate
+    ```
+4. Install Dependencies:                                                                                                                                                                             
+    ```bash
+        $ pip install -r requirements.txt
+    ```
 5. Configure local settings add your secret keys for the Google account,Django secret and Africa Talk Sms gate way
 6. Configure Environment Variables: Create a .env file in the root directory and add necessary environment variables; Google,AfricaTalking SECRET_KEY,DATABASE_URL
-8. Run Migrations:  python manage.py migrate
-9. Run the Development Server:  python manage.py runserver
-
-
+8. Run Migrations:                                                                                                                                                                                              
+    ```bash
+        $ python manage.py migrate
+    ```
+9. Run the Development Server:                                                                                                                                                                            
+    ```bash
+        $ python manage.py runserver
+    ```
 ### Test Coverage
 Run the following command to execute the unit tests: python manage.py test<br>
 Continuous Integration (CI): This project uses GitHub Actions for continuous integration. 
@@ -35,22 +54,47 @@ The workflow is configured to run tests on every push to the repository.
 3. **API Endpoints**: Sample endpoints for the main modules (customer, order).
 
 
-### Postman Collection
-To simplify testing the API, you can download the provided Postman collection [Ecommerce_postman_collection](https://github.com/kevi-t/Ecommerce_API/blob/master/Ecommerce.postman_collection.json):<br>
-• Customer:   <br>
-    POST[/api/ecommerce/customer/register/]: Creates a new customer.<br>
-    POST[/api/ecommerce/customer/login/]: Logs in a user and returns an authentication token.<br>
-    PUT[/api/ecommerce/customer/update/]: update user profile (requires Bearer token).<br>
-• Order:      <br>  
-      POST[/api/ecommerce/order/place-order/]: Creates a new order.(requires Bearer token)<br>
-      GET[/api/ecommerce/order/list/]: Fetches the list of orders. (requires Bearer token)<br>
-• OpenID connect: Paste the url;http://localhost:8000/api/ecommerce/customer/oidc/login/ on the browser to sign in with Google and obtain access Token<br>
+### Testing the API on Postman
+To simplify testing the API, you can download and import the provided Postman collection:
+* [Ecommerce Local_postman_collection](https://github.com/kevi-t/Ecommerce_API/blob/master/Ecommerce.postman_collection.json)
+* [Ecommerce Production_postman_collection](https://github.com/kevi-t/Ecommerce_API/blob/master/Ecommerce%20Production.postman_collection.json)<br>
 
+Endpoints descriptions:
+* Customer:
+   ```bash
+    POST[/api/ecommerce/customer/register/]: Creates a new customer.
+    POST[/api/ecommerce/customer/login/]: Logs in a user and returns an authentication token.
+    PUT[/api/ecommerce/customer/update/]: update user profile (requires Bearer token).
+   ```
+
+* Order:
+   ```bash   
+      POST[/api/ecommerce/order/place-order/]: Creates a new order.(requires Bearer token)
+      GET[/api/ecommerce/order/list/]: Fetches the list of orders. (requires Bearer token)
+   ```
+* OpenID connect/Google Sigin: paste on a browser to obtain the access Token
+   ```bash  
+      http://localhost:8000/api/ecommerce/customer/oidc/login/
+      https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/customer/oidc/login/
+   ```
 ### Expected Sample Outputs
+#### Register Endpoint
 ![alt text](image-1.png)   
+#### Login Endpoint
 ![alt text](image-2.png)
+#### Place order Endpoint
 ![alt text](image-3.png)
+#### Order List Endpoint
 ![alt text](image-4.png)
+#### OpenID connect endpoint
 ![alt text](image-5.png)
+
 ### Process flow Diagram
 ![ecommerce_api process flow diagram](https://github.com/user-attachments/assets/c11cec5c-5576-46d5-b984-7acebf55fb81)
+
+### Deployment
+* [Vercel](https://vercel.com/): Deployment of my Django App
+* [Railway](https://railway.com/): Deployment of my Postgre database service
+
+### Resources
+* [Django docs](https://docs.djangoproject.com/): Django documentation 
