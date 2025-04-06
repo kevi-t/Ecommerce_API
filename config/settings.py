@@ -16,7 +16,7 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecommerce-api-alpha-dun.vercel.app','localhost']
+ALLOWED_HOSTS = ['ecommerce-api-alpha-dun.vercel.app','ecommerce-vvlkmv986-kevi-ts-projects.vercel.app','localhost']
 
 CORS_ALLOWED_ORIGINS = ["ecommerce-api-alpha-dun.vercel.app",]
 
