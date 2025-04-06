@@ -12,12 +12,22 @@ class CustomerSerializer(serializers.ModelSerializer):
         fields = ['name', 'email', 'phone_number', 'password']
         extra_kwargs = {'password': {'write_only': True}}  
     
+    def validate_email(self, value):
+        # Check if the email already exists in the database
+        if Customer.objects.filter(email=value).exists():
+            raise serializers.ValidationError("Customer with this email already exists.")
+        return value
+    
     def validate_phone_number(self, value):
         # Remove any non-numeric characters (spaces, dashes, etc.)
         num_value = re.sub(r'\D', '', value)
 
         if len(num_value) != 10:
             raise serializers.ValidationError("Phone number must have exactly 10 digits")
+        
+        if Customer.objects.filter(phone_number=value).exists():
+            raise serializers.ValidationError("Customer with this phone number already exists.")
+        
         return "+254" + num_value[1:]
     
     def validate_password(self, value):
