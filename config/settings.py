@@ -14,14 +14,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = env.bool("DJANGO_DEBUG", default=True)
 DEBUG = True
 
-ALLOWED_HOSTS = ['ecommerce-api-alpha-dun.vercel.app']
+ALLOWED_HOSTS = ['ecommerce-api-alpha-dun.vercel.app','localhost']
 
-CORS_ALLOWED_ORIGINS = [
-    "https://ecommerce-api-alpha-dun.vercel.app",
-]
+CORS_ALLOWED_ORIGINS = ["ecommerce-api-alpha-dun.vercel.app",]
 
 # Configure Django sites framework
 SITE_ID = 1
@@ -56,9 +53,6 @@ INSTALLED_APPS = [
 # Token Authentication settings
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-       # 'rest_framework.authentication.SessionAuthentication',
-       # 'rest_framework.authentication.BasicAuthentication',
-       # 'rest_framework.authentication.TokenAuthentication',
        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_PERMISSION_CLASSES': [
@@ -118,7 +112,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-
 # Database
 # DATABASES = {
 #     'default': {
@@ -133,7 +126,6 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(default=env('DATABASE_URL'), conn_max_age=600, ssl_require=True)
 }
-
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -175,9 +167,8 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']  
 
 LOGIN_URL = '/'
-# LOGIN_REDIRECT_URL = 'http://localhost:8000/api/ecommerce/customer/oidc/callback/'
+#LOGIN_REDIRECT_URL = 'http://localhost:8000/api/ecommerce/customer/oidc/callback/'
 LOGIN_REDIRECT_URL = 'https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/customer/oidc/callback/'
-
 LOGOUT_REDIRECT_URL = '/' 
 
 REST_AUTH_TOKEN_MODEL = 'customer.Token'
