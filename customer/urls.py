@@ -1,24 +1,18 @@
-# customer/urls.py
 from django.urls import path
-from .views.register_views import register_user
-from .views.login_views import login_user
-from .views.profile_views import update_profile
-from .views.oidc_views import oidc_login,oidc_callback
+from rest_framework.routers import SimpleRouter
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
+from .views.customer_viewset import CustomerViewSet
+from .views.oidc_views import oidc_login, oidc_callback
 from .views.success_views import success
-from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView,)
 
+router = SimpleRouter()
+router.register(r'', CustomerViewSet, basename='customer')
 
-urlpatterns = [
-    path('register/', register_user, name='register_user'),
-    path('login/', login_user, name='login_user'),
-    path('update/', update_profile, name='update-profile'),
-    
-    
+urlpatterns = router.urls + [
     path('oidc/login/', oidc_login, name='oidc_login'),
     path('oidc/callback/', oidc_callback, name='oidc_callback'),
     path('success/', success, name='success'),
-
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-   
 ]

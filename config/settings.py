@@ -14,11 +14,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = ['ecommerce-api-alpha-dun.vercel.app','ecommerce-vvlkmv986-kevi-ts-projects.vercel.app','localhost']
+ALLOWED_HOSTS = ['ecommerce-api-orge.vercel.app', 'localhost', '127.0.0.1']
 
-CORS_ALLOWED_ORIGINS = ["ecommerce-api-alpha-dun.vercel.app",]
+CORS_ALLOWED_ORIGINS = [
+    'https://ecommerce-orge.vercel.app',   # Angular frontend
+    'http://localhost:4200',               # local Angular dev server
+]
 
 # Configure Django sites framework
 SITE_ID = 1
@@ -39,6 +42,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.openid_connect',
+
+    'corsheaders',
 
     'rest_framework',
     'rest_framework.authtoken',
@@ -79,6 +84,7 @@ AUTHENTICATION_BACKENDS = [
 
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -168,7 +174,7 @@ ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']
 
 LOGIN_URL = '/'
 #LOGIN_REDIRECT_URL = 'http://localhost:8000/api/ecommerce/customer/oidc/callback/'
-LOGIN_REDIRECT_URL = 'https://ecommerce-api-alpha-dun.vercel.app/api/ecommerce/customer/oidc/callback/'
+LOGIN_REDIRECT_URL = 'https://ecommerce-api-orge.vercel.app/api/ecommerce/customer/oidc/callback/'
 LOGOUT_REDIRECT_URL = '/' 
 
 REST_AUTH_TOKEN_MODEL = 'customer.Token'
