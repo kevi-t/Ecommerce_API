@@ -129,7 +129,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #         'PORT': '5432',
 #     }
 # }
-_db_url = env('POSTGRES_URL_NON_POOLING', default=env('DATABASE_URL', default=''))
+_db_url = env('DATABASE_URL', default=env('DATABASE_URL', default=''))
 DATABASES = {
     'default': dj_database_url.config(default=_db_url, conn_max_age=0, ssl_require=True)
 }
