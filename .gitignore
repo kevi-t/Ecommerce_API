@@ -1,6 +1,7 @@
 ;;files to ignore
 
 # Virtual environment
+.venv/
 venv/
 env/
 
@@ -11,10 +12,12 @@ __pycache__/
 
 # Django settings for local development
 .env
+env.sh
 *.sqlite3
 db.sqlite3
 
 # Logs and temporary files
+.ruff_cache/
 *.log
 *.pot
 *.py[co]

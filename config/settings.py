@@ -1,31 +1,24 @@
 from pathlib import Path
 from datetime import timedelta
-import os
-import dj_database_url
 from environ import Env
+import dj_database_url
+
+
 env = Env()
 env.read_env()
 
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = ['ecommerce-api-orge.vercel.app', 'localhost', '127.0.0.1']
 
-CORS_ALLOWED_ORIGINS = [
-    'https://ecommerce-orge.vercel.app',   # Angular frontend
-    'http://localhost:4200',               # local Angular dev server
-]
+CORS_ALLOWED_ORIGINS = ['https://ecommerce-orge.vercel.app', 'http://localhost:4200']
 
-# Configure Django sites framework
+# Configure Django sites framework 
 SITE_ID = 1
-
 
 # Application definition
 INSTALLED_APPS = [
@@ -36,8 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    
-    # OpenID Connect provider config
+    # OpenID connect provider config
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -48,14 +40,14 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
 
-    # modules
+    # Modules
     'orders',
     'customer',
 
     'oauth2_provider',
 ]
 
-# Token Authentication settings
+# Token authentication settings
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
        'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -77,11 +69,10 @@ SIMPLE_JWT = {
 }
 
 AUTHENTICATION_BACKENDS = [
-    'customer.authentication.custom_auth_backend.EmailBackend',
+    'customer.authentication.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend'
 ]
-
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -94,7 +85,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
     'allauth.account.middleware.AccountMiddleware',
-    
     'oauth2_provider.middleware.OAuth2TokenMiddleware',
 ]
 
@@ -118,20 +108,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-# Database
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'ecommerce_db',
-#         'USER': 'postgres',
-#         'PASSWORD': 'java',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
-_db_url = env('DATABASE_URL', default=env('DATABASE_URL', default=''))
+# Database Configurations
 DATABASES = {
-    'default': dj_database_url.config(default=_db_url, conn_max_age=0, ssl_require=True)
+    'default': dj_database_url.config(
+        default=env('DATABASE_URL'),
+        conn_max_age=0,
+        ssl_require=True,
+    )
 }
 
 # Password validation
@@ -150,16 +133,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
@@ -167,20 +145,19 @@ STATIC_URL = 'static/'
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Allauth settingss
+# All auth settingss
 AUTH_USER_MODEL = 'customer.Customer'
 ACCOUNT_LOGIN_METHODS = {'email'}
 ACCOUNT_EMAIL_VERIFICATION = 'none'  
 ACCOUNT_SIGNUP_FIELDS = ['email*', 'password1*', 'password2*']  
 
 LOGIN_URL = '/'
-#LOGIN_REDIRECT_URL = 'http://localhost:8000/api/ecommerce/customer/oidc/callback/'
-LOGIN_REDIRECT_URL = 'https://ecommerce-api-orge.vercel.app/api/ecommerce/customer/oidc/callback/'
+LOGIN_REDIRECT_URL = env('LOGIN_REDIRECT_URL')
 LOGOUT_REDIRECT_URL = '/' 
 
 REST_AUTH_TOKEN_MODEL = 'customer.Token'
 
-#Afrca Talking sms gateway
+# AfricasTalking sms gateway
 AFRICASTALKING_USERNAME = env('AFRICASTALKING_USERNAME')
 AFRICASTALKING_API_KEY = env('AFRICASTALKING_API_KEY')
 AFRICASTALKING_API_URL = 'https://api.sandbox.africastalking.com/version1/messaging'

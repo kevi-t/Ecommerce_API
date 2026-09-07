@@ -1,5 +1,6 @@
 from django.contrib.auth.backends import BaseBackend
-from customer.models.models import Customer
+from customer.models import Customer
+
 
 class EmailBackend(BaseBackend):
     def authenticate(self, request, email=None, password=None):

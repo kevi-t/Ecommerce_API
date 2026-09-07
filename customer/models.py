@@ -1,14 +1,14 @@
-# customer/models.py
 from django.conf import settings
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
 
 
 class CustomerManager(BaseUserManager):
+    """ Handles creation of regular users and superusers with email as the unique identifier instead of username. """
+
     def create_user(self, email, name, phone_number, password=None):
         if not email:
             raise ValueError("Users must have an email address")
-
         user = self.model(
             email=self.normalize_email(email),
             name=name,
@@ -23,6 +23,7 @@ class CustomerManager(BaseUserManager):
         user.is_admin = True
         user.save(using=self._db)
         return user
+
 
 class Customer(AbstractBaseUser):
     name = models.CharField(max_length=255)
@@ -55,6 +56,8 @@ class Customer(AbstractBaseUser):
 
 
 class CustomToken(models.Model):
+    """ Model for storing custom authentication tokens."""
+    
     key = models.CharField(max_length=40, unique=True)
     user = models.OneToOneField(settings.AUTH_USER_MODEL, related_name='custom_auth_token', on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)

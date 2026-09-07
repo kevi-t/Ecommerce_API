@@ -1,7 +1,5 @@
-# config/urls.py
 from django.contrib import admin
 from django.urls import path, include
-
 from oauth2_provider import urls as oauth2_urls
 from .views import homepage
 
